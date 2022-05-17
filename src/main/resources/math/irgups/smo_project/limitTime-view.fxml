@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="564.0" prefWidth="1412.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="math.irgups.smo_project.SMOLimitTimeCalculatorController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="553.0" prefWidth="1421.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Canvas fx:id="graphCanvas" height="72.0" layoutX="410.0" layoutY="41.0" width="1000.0" />
+            <Text fill="#e82323" layoutX="15.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Исходные данные:">
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="410.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Граф состояний:">
+               <font>
+                  <Font name="Bell MT" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="410.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Распределение предельных вероятностей:">
+               <font>
+                  <Font name="Bell MT" size="16.0" />
+               </font>
+            </Text>
+            <Group layoutX="411.0" layoutY="374.0" />
+            <Canvas fx:id="predelCanvas" height="104.0" layoutX="410.0" layoutY="143.0" width="1000.0" />
+            <Text layoutX="410.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Распределение вероятностей числа занятых каналов:">
+               <font>
+                  <Font name="Bell MT" size="16.0" />
+               </font>
+            </Text>
+            <Canvas fx:id="busyCanvas" height="116.0" layoutX="410.0" layoutY="282.0" width="1000.0" />
+            <Text layoutX="15.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Расчеты выполнены с погрешностью:">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fx:id="epsText" fill="#d01111" layoutX="263.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <TableView fx:id="propTable" layoutX="14.0" layoutY="299.0" prefHeight="215.0" prefWidth="376.0" stylesheets="@../../../tablestyle.css">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button layoutX="410.0" layoutY="489.0" mnemonicParsing="false" text="Показать формулы" />
+            <TableView fx:id="startTableView" layoutX="14.0" layoutY="41.0" prefHeight="215.0" prefWidth="376.0" stylesheets="@../../../tablestyle.css">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Text fill="#e82323" layoutX="15.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Характеристики:">
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font>
+            </Text>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
